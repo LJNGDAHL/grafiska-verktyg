@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+
+/*@import "normalize.css";*/
+
+body {
+  background-color: #FAFAFA;
+  color: #150607;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  padding: 4px 16px;
+  padding: 0.3rem 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    padding: 2rem 3rem;
+  }
+}
+
+p {
+  line-height: 1.4;
+}
+
+.center {
+  margin: 0 auto;
+  width: 70vw;
+}
+
+.headline {
+  font-weight: 900;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.headline--pre {
+  display: block;
+  font-size: 24px;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 600px) {
+  .headline {
+    font-size: 3rem;
+    line-height: 1.4;
+  }
+
+  .headline--pre {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .headline {
+    font-size: 4rem;
+    line-height: 1.4;
+  }
+
+  .headline--pre {
+    font-size: 3rem;
+  }
+}
+
+.link {
+  color: #150607;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: color 250ms ease-in;
+          transition: color 250ms ease-in;
+}
+
+.link:hover {
+  color: #341BB1;
+}
+
+/*------------------------------------------------------------------------------
+  NAVIGATION
+------------------------------------------------------------------------------*/
+
+.nav {
+  border-top: 6px solid #150607;
+  border-top: 0.4rem solid #150607;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-list-item {
+  display: inline;
+  text-transform: uppercase;
+}
+
+.assignment {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70vh;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.has-js .assignment {
+  opacity: 0.1;
+  padding-top: 160px;
+  padding-top: 10rem;
+}
+
+
+@-webkit-keyframes slide-in {
+  from {
+    opacity: 0.1;
+    padding-top: 10rem;
+  }
+  to {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+
+
+@keyframes slide-in {
+  from {
+    opacity: 0.1;
+    padding-top: 10rem;
+  }
+  to {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  FADE IN
+------------------------------------------------------------------------------*/
+
+.fade-in {
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /*animation-delay: 250ms;*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
