@@ -96,19 +96,23 @@ p {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 70vh;
   justify-content: flex-start;
 }
 
 .has-js .assignment {
-  opacity: 0.1;
+  opacity: 0;
   padding-top: 10rem;
+}
+
+.assignment-img {
+  background-color: #9DA4E1;
+  width: 100%;
 }
 
 
 @keyframes slide-in {
   from {
-    opacity: 0.1;
+    opacity: 0;
     padding-top: 10rem;
   }
   to {
