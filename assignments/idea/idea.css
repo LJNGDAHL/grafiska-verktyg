@@ -18,6 +18,10 @@ body {
   height: 100vh;
 }
 
+.site-header {
+  height: 3rem;
+}
+
 .main-container {
   background:
   linear-gradient(
@@ -76,10 +80,6 @@ body {
   left: 0.7rem;
 }
 
-.statistics-paragraph {
-  font-size: 0.7rem;
-}
-
 .statistics-counter {
   font-size: 2rem;
 }
@@ -120,7 +120,7 @@ body {
 }
 
 .input {
-  color: #6EC2EF;
+  color: #0691CD;
   font-size: 1rem;
   margin-right: 0.5rem;
   padding: 0.2rem 0.5rem;
@@ -144,4 +144,18 @@ body {
 .button:hover {
   color: white;
   background-color: #002561;
+}
+
+/*------------------------------------------------------------------------------
+  UTILITIES
+------------------------------------------------------------------------------*/
+
+.info-paragraph {
+  font-size: 0.7rem;
+}
+
+.info-paragraph--side {
+  bottom: 0.5rem;
+  position: absolute;
+  right: 0.7rem;
 }
