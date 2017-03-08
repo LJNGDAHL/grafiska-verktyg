@@ -1,20 +1,21 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
   color: #fff;
-  margin: 0;
-  padding: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
 body {
   display: flex;
-  flex-direction: column;
   height: 100vh;
+  flex-direction: column;
 }
 
 .main-container {
@@ -27,28 +28,118 @@ body {
   background-position: center center;
   background-size: cover;
   flex-grow: 1;
+  overflow: hidden;
   position: relative;
-  padding: 6rem 3rem;
+  padding: 6rem 1rem;
   width: 100vw;
 }
 
 .headline {
   color: #fff;
   font-weight: 300;
-  font-size: 90px;
+  font-size: 2rem;
   text-align: center;
+  white-space: nowrap;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
   margin: 0;
 }
 
-.stats {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+@media screen and (min-width: 500px) {
+  .headline {
+    font-size: 2.5rem;
+  }
 }
+
+@media screen and (min-width: 600px) {
+  .headline {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main-container {
+    padding: 5rem 1rem;
+  }
+
+  .headline {
+    font-size: 4rem;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  STATISTICS
+------------------------------------------------------------------------------*/
+
+.statistics {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0.7rem;
+}
+
+.statistics-paragraph {
+  font-size: 0.7rem;
+}
+
+.statistics-counter {
+  font-size: 2rem;
+}
+
+/*------------------------------------------------------------------------------
+  EMAIL CONTAINER
+------------------------------------------------------------------------------*/
 
 .email-container {
   background-color: #002561;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
   width: 100vw;
-  padding: 2rem 3rem 5rem;
+  padding: 1rem 1.5rem 4rem;
+}
+
+@media screen and (min-width: 600px) {
+  .email-container {
+    padding: 2rem 3rem 5rem;
+  }
+}
+
+.email-container-item {
+  display: flex;
+  width: 100%;
+  max-width: 450px;
+}
+
+.input,
+.button {
+  background-color: #fff;
+  outline: none;
+  height: 2rem;
+}
+
+.input {
+  color: #002561;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+}
+
+.button {
+  border: 2px solid white;
+  color: #002561;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  max-width: 250px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition-duration: 0.8s;
+  transition-delay: 0.05s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.14, 0.99);
+}
+
+.button:hover {
+  color: white;
+  background-color: #002561;
 }
