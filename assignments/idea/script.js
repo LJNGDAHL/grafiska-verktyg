@@ -3,16 +3,35 @@
 
   const statContainer = document.querySelector('.statistics-container-js');
   const infoText = document.querySelector('.statistics-js');
+  const city = document.querySelector('.city-js');
+
+  // TODO: Prevent the form from posting
 
   /**
-   * [add fake statistics on site for demo purpose]
+   * Takes two parameters and returns a random integer.
+   * @param  {int} min minimum integer to be returned
+   * @param  {int} max maximum integer to be returned.
+   * @return {int}     random integer between min and max.
+   */
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  function handleCity() {
+    const cities = ['New Taipei City', 'Pune', 'Baghdad', 'Kolkata', 'Cape Town', 'Santiago', 'Johannesburg', 'Moscow', 'Madrid', 'Busan'];
+
+    setInterval(function randomCity() {
+      const randomIndex = getRandomInt(0, (cities.length - 1));
+      // console.log(cities[randomIndex]);
+      city.innerText = cities[randomIndex];
+    }, getRandomInt(1000, 10000));
+  }
+  handleCity();
+
+  /**
+   * Add fake statistics on site for demo purpose
    */
   function addStatistics() {
-    // Get random int for displaying number of letters sent
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
-    }
-
     let number = getRandomInt(20000000, 50000000000);
 
     // Create a paragraph to display number of letters sent
