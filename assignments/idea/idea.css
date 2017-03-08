@@ -18,9 +18,48 @@ body {
   height: 100vh;
 }
 
+/*------------------------------------------------------------------------------
+  SITE HEADER
+------------------------------------------------------------------------------*/
+
 .site-header {
-  height: 3rem;
+  align-items: center;
+  border-bottom: 5px solid #0691CD;
+  color: #002561;
+  display: flex;
+  justify-content: center;
+  height: 2.8rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 0 0.9rem;
 }
+
+.site-logo {
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+.site-header-brand {
+  display: none;
+}
+
+.site-header-slogan {
+  color: #0691CD;
+  font-style: italic;
+}
+
+@media screen and (min-width: 600px) {
+  .site-header {
+    justify-content: space-between;
+  }
+  .site-header-brand {
+    display: inline;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  MAIN CONTAINER
+------------------------------------------------------------------------------*/
 
 .main-container {
   background:
@@ -42,6 +81,7 @@ body {
   color: #fff;
   font-weight: 300;
   font-size: 2rem;
+  line-height: 1.1;
   text-align: center;
   white-space: nowrap;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
@@ -76,12 +116,18 @@ body {
 
 .statistics {
   position: absolute;
-  bottom: 0.3rem;
+  bottom: 0.8rem;
   left: 0.7rem;
 }
 
 .statistics-counter {
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 600px) {
+  .statistics-counter {
+    font-size: 2rem;
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -110,6 +156,10 @@ body {
   margin-bottom: 0.7rem;
 }
 
+/*------------------------------------------------------------------------------
+  INPUT AND BUTTONS
+------------------------------------------------------------------------------*/
+
 .input,
 .button {
   background-color: #fff;
@@ -128,7 +178,7 @@ body {
 }
 
 .button {
-  border: 2px solid white;
+  border: 2px solid #fff;
   color: #002561;
   cursor: pointer;
   font-size: 0.9rem;
@@ -142,7 +192,7 @@ body {
 }
 
 .button:hover {
-  color: white;
+  color: #fff;
   background-color: #002561;
 }
 
