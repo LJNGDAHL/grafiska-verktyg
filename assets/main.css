@@ -575,22 +575,26 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 70vh;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
 .has-js .assignment {
-  opacity: 0.1;
+  opacity: 0;
   padding-top: 160px;
   padding-top: 10rem;
+}
+
+.assignment-img {
+  background-color: #9DA4E1;
+  width: 100%;
 }
 
 
 @-webkit-keyframes slide-in {
   from {
-    opacity: 0.1;
+    opacity: 0;
     padding-top: 10rem;
   }
   to {
@@ -602,7 +606,7 @@ p {
 
 @keyframes slide-in {
   from {
-    opacity: 0.1;
+    opacity: 0;
     padding-top: 10rem;
   }
   to {
