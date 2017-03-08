@@ -24,7 +24,6 @@
 
     setInterval(function randomCity() {
       const randomIndex = getRandomInt(0, (cities.length - 1));
-      // console.log(cities[randomIndex]);
       city.innerText = cities[randomIndex];
     }, getRandomInt(1000, 10000));
   }
