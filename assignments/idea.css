@@ -96,30 +96,31 @@ body {
   align-items: center;
   height: 35vh;
   width: 100vw;
-  padding: 1rem 1.5rem 4rem;
-}
-
-@media screen and (min-width: 600px) {
-  .email-container {
-    padding: 2rem 3rem 5rem;
-  }
+  overflow: hidden;
 }
 
 .email-container-item {
   display: flex;
+  min-width: 350px;
+  max-width: 550px;
   width: 100%;
-  max-width: 450px;
+}
+
+.email-container-item:not(:last-child) {
+  margin-bottom: 0.7rem;
 }
 
 .input,
 .button {
   background-color: #fff;
+  border-radius: 1px;
+  border: 0;
   outline: none;
-  height: 2rem;
+  min-height: 2rem;
 }
 
 .input {
-  color: #002561;
+  color: #6EC2EF;
   font-size: 1rem;
   margin-right: 0.5rem;
   padding: 0.2rem 0.5rem;
@@ -130,6 +131,7 @@ body {
   border: 2px solid white;
   color: #002561;
   cursor: pointer;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
   max-width: 250px;
   padding: 0.5rem 1rem;
