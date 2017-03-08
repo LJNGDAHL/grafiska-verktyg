@@ -1,6 +1,8 @@
 (function idea() {
   'use strict';
 
+  // TODO: Replace int with comma separated string.
+
   const statContainer = document.querySelector('.statistics-container-js');
   const infoText = document.querySelector('.statistics-js');
   const city = document.querySelector('.city-js');
