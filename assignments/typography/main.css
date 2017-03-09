@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.letter-container {
+  box-sizing: border-box;
+  margin: 5rem auto;
+  border: 8px solid #1F1300;
+  padding: 6rem 4rem 5rem;
+  width: 790px;
+  overflow: hidden;
+}
+
+/*------------------------------------------------------------------------------
+  GENERAL SPACING
+------------------------------------------------------------------------------*/
+
+.letter {
+  display: inline;
+  float: left;
+  height: 4rem;
+  margin-right: 0.4rem;
+  margin-bottom: 1.2rem;
+  width: auto;
+}
+
+.spacing {
+  display: inline;
+  float: left;
+  height: 4rem;
+  width: 2rem;
+}
+
+/*------------------------------------------------------------------------------
+  SPECIFIC LETTER KERNING
+------------------------------------------------------------------------------*/
+
+.h {
+  margin-right: 0.05rem;
+}
+
+.p {
+  margin-left: 0.1rem;
+}
+
+/* Clearfix before letter 'q' */
+.q {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.uppercaseZ,
+.k,
+.b,
+.f,
+.y,
+.x {
+  margin-right: 0.1rem;
+}
