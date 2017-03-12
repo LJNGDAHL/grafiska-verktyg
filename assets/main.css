@@ -489,6 +489,11 @@ p {
   margin-bottom: 0;
 }
 
+/* When h2 is followed by paragraph and not image container */
+h2 + p {
+  margin-top: 0;
+}
+
 .center {
   margin: 0 auto;
   max-width: 600px;
@@ -602,14 +607,26 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: 32px;
+  margin-top: 2rem;
   margin-bottom: 32px;
   margin-bottom: 2rem;
+}
+
+.assignment:not(:last-of-type) {
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
 .has-js.assignment {
   opacity: 0;
   -webkit-transform: translateY(10rem);
           transform: translateY(10rem);
+}
+
+.assignment-headline {
+  margin-top: 0;
 }
 
 .assignment.static {
@@ -671,6 +688,6 @@ p {
           animation-duration: 400ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }

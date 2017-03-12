@@ -32,6 +32,11 @@ p {
   margin-bottom: 0;
 }
 
+/* When h2 is followed by paragraph and not image container */
+h2 + p {
+  margin-top: 0;
+}
+
 .center {
   margin: 0 auto;
   max-width: 600px;
@@ -126,12 +131,22 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.assignment:not(:last-of-type) {
+  border-bottom: 1px solid var(--primary-grey);
+  padding-bottom: 2rem;
 }
 
 .has-js.assignment {
   opacity: 0;
   transform: translateY(10rem);
+}
+
+.assignment-headline {
+  margin-top: 0;
 }
 
 .assignment.static {
@@ -170,5 +185,5 @@ p {
   animation-name: slide-in;
   animation-duration: 400ms;
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
 }
