@@ -1,12 +1,19 @@
 @import "normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Raleway:400,400i,600');
+
+:root {
+  --primary-light: #FAFAFA;
+  --primary-dark: #150607;
+  --primary-grey: #C4C4C4;
+}
 
 body {
-  background-color: #FAFAFA;
-  color: #150607;
-  font-family: 'Playfair Display', serif;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  padding: 0.3rem 1rem;
+  min-width: 350px;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -15,13 +22,19 @@ body {
   }
 }
 
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
 p {
-  line-height: 1.4;
+  line-height: 1.7;
+  margin-bottom: 0;
 }
 
 .center {
   margin: 0 auto;
-  width: 70vw;
+  max-width: 600px;
 }
 
 .headline {
@@ -61,14 +74,25 @@ p {
 }
 
 .link {
-  color: #150607;
-  font-weight: 700;
+  color: var(--primary-dark);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid var(--primary-light);
+  font-weight: 600;
   text-decoration: none;
-  transition: color 250ms ease-in;
+  transition: border-bottom 250ms ease-in;
 }
 
 .link:hover {
-  color: #341BB1;
+  border-bottom: 2px solid var(--primary-dark);
+}
+
+.no-content {
+  font-weight: 400;
+  color: var(--primary-grey);
+}
+
+.no-content:hover {
+  border-bottom: 2px solid var(--primary-light);
 }
 
 /*------------------------------------------------------------------------------
@@ -76,7 +100,7 @@ p {
 ------------------------------------------------------------------------------*/
 
 .nav {
-  border-top: 0.4rem solid #150607;
+  border-top: 0.4rem solid var(--primary-dark);
   margin-top: 1.5rem;
 }
 
@@ -89,23 +113,40 @@ p {
 
 .nav-list-item {
   display: inline;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+/*------------------------------------------------------------------------------
+  ASSIGMENT ARTICLES (FADE IN ON SCROLL)
+------------------------------------------------------------------------------*/
 
 .assignment {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-bottom: 2rem;
 }
 
-.has-js .assignment {
+.has-js.assignment {
   opacity: 0;
-  padding-top: 10rem;
+  transform: translateY(10rem);
+}
+
+.assignment.static {
+  opacity: 1;
+  animation: none;
+  transform: none;
+}
+
+.img-desc {
+  margin: 0.2rem 0 0;
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 .assignment-img {
-  background-color: #9DA4E1;
   width: 100%;
 }
 
@@ -113,11 +154,11 @@ p {
 @keyframes slide-in {
   from {
     opacity: 0;
-    padding-top: 10rem;
+    transform: translateY(10rem);
   }
   to {
     opacity: 1;
-    padding-top: 0;
+      transform: translateY(0);
   }
 }
 
@@ -129,6 +170,5 @@ p {
   animation-name: slide-in;
   animation-duration: 400ms;
   animation-fill-mode: forwards;
-  /*animation-delay: 250ms;*/
   animation-timing-function: linear;
 }
