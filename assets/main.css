@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Raleway:400,400i,600');
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -466,10 +466,11 @@ template {
 body {
   background-color: #FAFAFA;
   color: #150607;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  padding: 4px 16px;
-  padding: 0.3rem 1rem;
+  min-width: 350px;
+  padding: 16px;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -478,13 +479,19 @@ body {
   }
 }
 
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
 p {
-  line-height: 1.4;
+  line-height: 1.7;
+  margin-bottom: 0;
 }
 
 .center {
   margin: 0 auto;
-  width: 70vw;
+  max-width: 600px;
 }
 
 .headline {
@@ -527,14 +534,26 @@ p {
 
 .link {
   color: #150607;
-  font-weight: 700;
+  padding-bottom: 3px;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #FAFAFA;
+  font-weight: 600;
   text-decoration: none;
-  -webkit-transition: color 250ms ease-in;
-          transition: color 250ms ease-in;
+  -webkit-transition: border-bottom 250ms ease-in;
+          transition: border-bottom 250ms ease-in;
 }
 
 .link:hover {
-  color: #341BB1;
+  border-bottom: 2px solid #150607;
+}
+
+.no-content {
+  font-weight: 400;
+  color: #C4C4C4;
+}
+
+.no-content:hover {
+  border-bottom: 2px solid #FAFAFA;
 }
 
 /*------------------------------------------------------------------------------
@@ -561,8 +580,13 @@ p {
 
 .nav-list-item {
   display: inline;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+/*------------------------------------------------------------------------------
+  ASSIGMENT ARTICLES (FADE IN ON SCROLL)
+------------------------------------------------------------------------------*/
 
 .assignment {
   -webkit-box-align: center;
@@ -578,16 +602,33 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
-.has-js .assignment {
+.has-js.assignment {
   opacity: 0;
-  padding-top: 160px;
-  padding-top: 10rem;
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
+}
+
+.assignment.static {
+  opacity: 1;
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.img-desc {
+  margin: 3px 0 0;
+  margin: 0.2rem 0 0;
+  font-style: italic;
+  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 .assignment-img {
-  background-color: #9DA4E1;
   width: 100%;
 }
 
@@ -595,11 +636,13 @@ p {
 @-webkit-keyframes slide-in {
   from {
     opacity: 0;
-    padding-top: 10rem;
+    -webkit-transform: translateY(10rem);
+            transform: translateY(10rem);
   }
   to {
     opacity: 1;
-    padding-top: 0;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
   }
 }
 
@@ -607,11 +650,13 @@ p {
 @keyframes slide-in {
   from {
     opacity: 0;
-    padding-top: 10rem;
+    -webkit-transform: translateY(10rem);
+            transform: translateY(10rem);
   }
   to {
     opacity: 1;
-    padding-top: 0;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
   }
 }
 
@@ -626,7 +671,6 @@ p {
           animation-duration: 400ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  /*animation-delay: 250ms;*/
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }

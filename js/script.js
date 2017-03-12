@@ -9,13 +9,25 @@
     } return false;
   }
 
-  window.addEventListener('scroll', function handleScroll() {
+  function handleScroll(animate = true) {
     assignments.forEach(function fadeIn(assignment) {
       if (handleFade(assignment)) {
-        assignment.classList.add('fade-in');
+        const classList = ['fade-in'];
+
+        if (!animate) {
+          classList.push('static');
+        }
+
+        assignment.classList.add(...classList);
       } else if (handleFade(assignment) === false) {
-        assignment.classList.remove('fade-in');
+        assignment.classList.remove('fade-in', 'static');
       }
     });
+  }
+
+  handleScroll(false);
+
+  window.addEventListener('scroll', function onScroll() {
+    handleScroll();
   }, false);
 }());
