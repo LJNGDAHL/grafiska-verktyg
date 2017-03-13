@@ -464,8 +464,8 @@ template {
 }
 
 body {
-  background-color: #FAFAFA;
-  color: #150607;
+  background-color: #F8F8F8;
+  color: #373737;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   min-width: 350px;
@@ -479,9 +479,13 @@ body {
   }
 }
 
-h1,
-h2 {
+h1 {
   font-family: 'Playfair Display', serif;
+}
+
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
@@ -490,7 +494,8 @@ p {
 }
 
 /* When h2 is followed by paragraph and not image container */
-h2 + p {
+h2 + p,
+h3 + p {
   margin-top: 0;
 }
 
@@ -537,28 +542,51 @@ h2 + p {
   }
 }
 
+/*------------------------------------------------------------------------------
+  LINKS
+------------------------------------------------------------------------------*/
+
 .link {
-  color: #150607;
+  color: #373737;
+  text-decoration: none;
+}
+
+nav .link {
   padding-bottom: 3px;
   padding-bottom: 0.2rem;
-  border-bottom: 2px solid #FAFAFA;
+  border-bottom: 2px solid #F8F8F8;
   font-weight: 600;
-  text-decoration: none;
   -webkit-transition: border-bottom 250ms ease-in;
           transition: border-bottom 250ms ease-in;
 }
 
-.link:hover {
-  border-bottom: 2px solid #150607;
+nav .link:hover {
+  border-bottom: 2px solid #373737;
 }
 
+article .link {
+  background-color: #F8F8F8;
+  border-bottom: 1.5px solid #373737;
+  padding-bottom: 1px;
+  padding-bottom: 0.1rem;
+  -webkit-transition: border-bottom 250ms ease-in, background-color 250ms ease-in;
+          transition: border-bottom 250ms ease-in, background-color 250ms ease-in;
+}
+
+article .link:hover {
+  background-color: #FADBE6;
+  border-bottom: 1.5px solid #FADBE6;
+}
+
+/* These are only temporary */
 .no-content {
   font-weight: 400;
   color: #C4C4C4;
 }
 
-.no-content:hover {
-  border-bottom: 2px solid #FAFAFA;
+/* These are only temporary */
+nav .no-content:hover {
+  border-bottom: 2px solid #F8F8F8;
 }
 
 /*------------------------------------------------------------------------------
@@ -566,8 +594,8 @@ h2 + p {
 ------------------------------------------------------------------------------*/
 
 .nav {
-  border-top: 6px solid #150607;
-  border-top: 0.4rem solid #150607;
+  border-top: 6px solid #373737;
+  border-top: 0.4rem solid #373737;
   margin-top: 24px;
   margin-top: 1.5rem;
 }
@@ -675,6 +703,13 @@ h2 + p {
       -webkit-transform: translateY(0);
               transform: translateY(0);
   }
+}
+
+.genre {
+  color: #E2789D;
+  /*font-weight: 600;*/
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /*------------------------------------------------------------------------------

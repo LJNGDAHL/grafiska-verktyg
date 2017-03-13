@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Raleway:400,400i,600');
 
 :root {
-  --primary-light: #FAFAFA;
-  --primary-dark: #150607;
+  --primary-dark: #373737;
+  --primary-light: #F8F8F8;
   --primary-grey: #C4C4C4;
+  --pink: #E2789D;
+  --pink-light: #FADBE6;
 }
 
 body {
@@ -22,9 +24,13 @@ body {
   }
 }
 
-h1,
-h2 {
+h1 {
   font-family: 'Playfair Display', serif;
+}
+
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
@@ -33,7 +39,8 @@ p {
 }
 
 /* When h2 is followed by paragraph and not image container */
-h2 + p {
+h2 + p,
+h3 + p {
   margin-top: 0;
 }
 
@@ -78,25 +85,46 @@ h2 + p {
   }
 }
 
+/*------------------------------------------------------------------------------
+  LINKS
+------------------------------------------------------------------------------*/
+
 .link {
   color: var(--primary-dark);
+  text-decoration: none;
+}
+
+nav .link {
   padding-bottom: 0.2rem;
   border-bottom: 2px solid var(--primary-light);
   font-weight: 600;
-  text-decoration: none;
   transition: border-bottom 250ms ease-in;
 }
 
-.link:hover {
+nav .link:hover {
   border-bottom: 2px solid var(--primary-dark);
 }
 
+article .link {
+  background-color: var(--primary-light);
+  border-bottom: 1.5px solid var(--primary-dark);
+  padding-bottom: 0.1rem;
+  transition: border-bottom 250ms ease-in, background-color 250ms ease-in;
+}
+
+article .link:hover {
+  background-color: var(--pink-light);
+  border-bottom: 1.5px solid var(--pink-light);
+}
+
+/* These are only temporary */
 .no-content {
   font-weight: 400;
   color: var(--primary-grey);
 }
 
-.no-content:hover {
+/* These are only temporary */
+nav .no-content:hover {
   border-bottom: 2px solid var(--primary-light);
 }
 
@@ -175,6 +203,13 @@ h2 + p {
     opacity: 1;
       transform: translateY(0);
   }
+}
+
+.genre {
+  color: var(--pink);
+  /*font-weight: 600;*/
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /*------------------------------------------------------------------------------
