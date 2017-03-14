@@ -209,3 +209,9 @@ body {
   position: absolute;
   right: 0.7rem;
 }
+
+@media screen and (max-height: 550px) {
+  .email-container {
+    display: none;
+  }
+}

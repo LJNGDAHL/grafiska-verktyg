@@ -20,7 +20,7 @@
   }
 
   function handleCity() {
-    const cities = ['New Taipei City', 'Pune', 'Baghdad', 'Kolkata', 'Cape Town', 'Santiago', 'Johannesburg', 'Moscow', 'Madrid', 'Busan'];
+    const cities = ['Pune', 'Baghdad', 'Kolkata', 'Cape Town', 'Santiago', 'New York', 'Moscow', 'Madrid', 'Busan', 'Boston'];
 
     setInterval(function randomCity() {
       const randomIndex = getRandomInt(0, (cities.length - 1));
