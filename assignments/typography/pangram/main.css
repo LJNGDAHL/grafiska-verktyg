@@ -1,16 +1,53 @@
+:root {
+  --primary-dark: #373737;
+  --primary-light: #F8F8F8;
+  --primary-grey: #F4F2F2;
+}
+
 * {
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+}
+
+body {
+  background-color: var(--primary-grey);
+  min-width: 870px;
+  overflow: hidden;
 }
 
 .letter-container {
+  background-color: var(--primary-light);
   box-sizing: border-box;
   margin: 5rem auto;
-  border: 8px solid #1F1300;
-  padding: 6rem 4rem 5rem;
-  width: 790px;
+  padding: 10rem 7rem 8rem;
   overflow: hidden;
+}
+
+/*------------------------------------------------------------------------------
+  FADE IN (IF JS)
+------------------------------------------------------------------------------*/
+
+.has-js .letter-container {
+  opacity: 0;
+  animation: fade-in 750ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.has-js .letter {
+  opacity: 0;
+  animation: fade-in 950ms ease-in-out;
+  animation-delay: 750ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -59,4 +96,18 @@
 .y,
 .x {
   margin-right: 0.1rem;
+}
+
+.y,
+.v,
+.i,
+.p,
+.c,
+.n,
+.aring {
+  margin-left: -0.05rem;
+}
+
+.e {
+  margin-left: -0.1rem;
 }
