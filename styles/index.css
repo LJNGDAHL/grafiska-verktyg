@@ -193,6 +193,9 @@ nav .no-content:hover {
   width: 100%;
 }
 
+.assignment-img {
+  border: 1px solid var(--primary-grey);
+}
 
 @keyframes slide-in {
   from {
